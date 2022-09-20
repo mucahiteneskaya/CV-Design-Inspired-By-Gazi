@@ -1,0 +1,447 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #212529;
+}
+
+
+.app {
+    background-color: #0a192f;
+    display: flex;
+    flex-direction: row;
+}
+
+#content {
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.fade-in-section .is-visible {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+    visibility: visible;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+
+/* Info */
+
+#intro {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 15%;
+    padding-top: 18%;
+    min-height: 100vh;
+}
+
+.Typist {
+    color: #ccd6f6;
+    text-align: center;
+    font-size: 7.6rem;
+    margin-top: -3rem;
+}
+
+.intro-name, .intro-title {
+    font-family: "NTR",sans-serif;
+    font-size: 8.6rem;
+}
+
+.intro-name {
+    color: #64ffda;
+    font-weight: 700;
+}
+
+.Typist .Cursor {
+    display: inline-block;
+}
+
+.Typist .Cursor--blinking {
+    color: #64ffda;
+    padding-left: 0.4rem;
+    opacity: 1;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: blink;
+}
+
+@keyframes blink{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: .5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.intro-desc, .intro-subtitle {
+    font-family: "NTR",sans-serif;
+    color: #8892b0;;
+}
+
+.intro-subtitle {
+    margin-top: -3.6rem;
+    font-weight: 300;
+    font-size: 4.8rem;
+}
+
+.intro-desc {
+    font-size: 2.2rem;
+    max-width: 40%;
+    text-align: justify;
+    padding-bottom: 50%;
+}
+
+
+
+/* About */
+
+#about {
+    padding-left: 15%;
+    padding-right: 25%;
+    min-height: 60vh;
+}
+
+.section-header {
+    display: flex;
+    padding-bottom: 4.2rem;
+    width: 100vw;
+}
+
+
+.section-title {
+    font-family: "NTR",sans-serif;
+    color: #ccd6f6;
+    font-size: 4.6rem;
+    font-weight: 700;
+}
+
+.section-header::after {
+    content: "";
+    display: block;
+    width: 30rem;
+    margin-top: 3.9rem;
+    height: 1px;
+    margin-left: 2rem;
+    background-color: #112240;;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.about-description {
+    font-family: "NTR", sans-serif;
+    color: #8892b0;
+    max-width: 60rem;
+    font-size: 22px;
+    text-align: justify;
+    margin: 0;
+}
+
+.about-description a, .about-description b {
+    font-size: 2.1rem;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none!important;
+    color: #64ffda!important;
+}
+
+ul {
+   list-style: none;
+    margin-left: -4rem;
+}
+
+.about-description ul {
+    padding-top: 2rem;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(2,minmax(150px,10px));
+}
+
+.about-description li::before {
+    content: "▹  ";
+    color: #64ffda;;
+    position: absolute;
+    left: 0;
+}
+
+.about-description li {
+    position: relative;
+    padding-left: 2rem;
+    font-size: 1.8rem;
+    color: #8892b0;;
+}
+
+.about-image {
+    padding-left: 4rem;
+}
+
+.about-image img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-left: 3rem;
+    box-shadow: 0.6rem 1.3rem 2.3rem -0.5rem;
+    border: none;
+}
+
+/* experience */
+
+#experience {
+    padding-left: 15%;
+    min-height: 60vh;
+}
+
+.jss1 {
+    height: 30rem;
+    display: flex;
+    flex-grow: 1;
+}
+
+.MuiTabs-root {
+    display: flex;
+    overflow: hidden;
+    min-height: 4.8rem;
+    -webkit-overflow-scrolling: touchy;
+}
+
+.MuiTabs-vertical {
+    flex-direction: column;
+}
+
+.jss2 {
+    border-right: 0.1rem solid rgba(0, 0, 0, 0.12); 
+}
+
+.MuiTabs-scrollable {
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
+
+.MuiTabs-scroller {
+    flex: 1 1 auto;
+    display: inline-block;
+    position: relative;
+    white-space: nowrap;
+}
+
+.MuiTabs-flexContainer {
+    display: flex;
+}
+
+.MuiTabs-flexContainerVertical {
+    flex-direction: column;
+}
+
+.MuiButtonBase-root {
+    outline: none!important;
+    color: #ccd6f6!important;
+}
+
+.MuiButtonBase-root {
+    color: inherit;
+    border: 0;
+    cursor: pointer;
+    margin: 0;
+    display: inline-flex;
+    outline: 0;
+    padding: 0;
+    position: relative;
+    align-items: center;
+    user-select: none;
+    border-radius: 0;
+    vertical-align: middle;
+    -moz-appearance: none;
+    justify-content: center;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.MuiTab-root {
+    padding: 0.6rem-1.2rem;
+    overflow: hidden;
+    position: relative;
+    font-size: 1rem;
+    max-width: 26.4rem;
+    min-width: 7.2rem;
+    box-sizing: border-box;
+    min-height: 4.8px;
+    text-align: center;
+    flex-shrink: 0;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 500;
+    line-height: 1.75;
+    white-space: normal;
+    letter-spacing: 0.02857em;
+    text-transform: uppercase;
+}
+
+.MuiTab-textColorInherit {
+    color: inherit;
+    opacity: 0.7;
+}
+
+[type=button]:not(:disabled), [type=reset]:not(:disabled),
+[type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+}
+
+.MuiTab-textColorInherit .Mui-selected {
+    opacity: 1;
+}
+
+#experience .MuiTab-root {
+    padding: 0.6rem 2rem;
+}
+
+.MuiTab-wrapper {
+    font-size: 1.6rem;
+    text-align: center;
+    align-items: flex-start!important;
+    font-family: "NTR",sans-serif;
+}
+
+.MuiTab-wrapper {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.MuiTouchRipple-root {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    overflow: hidden;
+    position: absolute;
+    border-radius: inherit;
+    pointer-events: none;
+}
+
+.jss5, .PrivateTabIndicator-colorSecondary-5 {
+    background-color: #64ffda!important;
+}
+
+.jss3 {
+    width: 100%;
+    bottom: 0;
+    height: 0.2rem;
+    position: absolute;
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.jss5 {
+    background-color: #f50057;
+}
+
+.jss6 {
+    right: 0;
+    width: 0.2rem;
+    height: 100%;
+}
+
+#vertical-tabpanel {
+    margin-top: -2.8rem;
+    padding-left: 2.5rem;
+}
+
+.jss37 {
+    padding: 2.4rem;
+
+}
+
+.MuiTypography-root {
+    margin: 0;
+}
+
+.MuiTypography-body1 {
+    font-size: 1rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+}
+
+.jobList-job-company, .jobList-job-title {
+    font-family: "NTR",sans-serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+.jobList-job-title {
+    color: #ccd6f6;;
+}
+
+.jobList-job-company {
+    color: #64ffda;;
+}
+
+.jobList-duration {
+    font-family: "NTR",sans-serif;
+    font-size: 1.8rem;
+    color: #8892b0;
+}
+
+.job-description {
+    padding-top: 2.4rem;
+    max-width: 65rem;
+    font-family: "NTR",sans-serif;
+    font-size: 2rem;
+}
+
+.job-description li {
+    position: relative;
+    padding-left: 3rem;
+    padding-bottom: 1.6rem;
+    font-size: 1.8rem;
+    color: #8892b0;s;
+}
+
+.job-description li:before {
+    content: "▹ ";
+    color: #64ffda;
+    position: absolute;
+    left: 0;
+}
+
+
+
+
+
+
+
+
